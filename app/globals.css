@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Asegúrate de que el formulario se vea bien dentro del área principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7; /* Fondo claro */
+    padding: 2rem; /* Espaciado para que no se vea pegado a los bordes */
+  }
+  
+  .bg-white {
+    background-color: white;
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-lg {
+    border-radius: 8px;
+  }
+  
+  .p-8 {
+    padding: 2rem;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .max-w-3xl {
+    max-width: 48rem; /* Ajusta según el tamaño deseado para el formulario */
+  }
+  
