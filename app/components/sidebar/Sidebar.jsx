@@ -13,15 +13,18 @@ export default function SidebarPage() {
       >
         
         <div className="mb-4">
-          <img 
-            src="/image/imagen.png" 
-            className="w-full h-32 object-cover rounded-md"
-          />
+        <Image
+      src="/image/imagen.png"
+      width={200}
+      height={100}
+      alt="Picture of the author"
+      className="mx-auto"
+    />
         </div>
 
         <a
           href="#"
-          className="flex items-center space-x-1 rounded-md px-2 py-3 text-blue-600 bg-white hover:bg-gray-100 hover:text-blue-700"
+          className="flex items-center rounded-md px-2 py-3 text-blue-600 bg-white hover:bg-gray-100 hover:text-blue-700"
         >
           <span className="text-2xl">
             <MdDashboard />
@@ -31,24 +34,24 @@ export default function SidebarPage() {
 
         <a
           href="#"
-          className="flex items-center space-x-1 rounded-md px-2 py-3 text-blue-400 bg-white hover:bg-gray-100 hover:text-blue-700"
+          className="flex items-center justify-between rounded-md px-2 py-3 text-blue-400 bg-white hover:bg-gray-100 hover:text-blue-700"
         >
           <span className="text-2xl">
             <MdFace6 />
           </span>
           <span>Prospectos</span>
-          <Bs0CircleFill />
+          <Bs0CircleFill className="text-lg" />
         </a>
 
         <a
           href="#"
-          className="flex items-center space-x-1 rounded-md px-2 py-3 text-red-600 bg-white hover:bg-gray-100 hover:text-red-700"
+          className="flex items-center justify-between rounded-md px-2 py-3 text-red-600 bg-white hover:bg-gray-100 hover:text-red-700"
         >
-          <span className="text-2xl">
+ <span className="text-2xl">
             <FaFileSignature />
           </span>
           <span>Presupuestos</span>
-          <Bs0CircleFill />
+          <Bs0CircleFill className="text-lg"/>
         </a>
       </aside>
     </div>

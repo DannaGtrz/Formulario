@@ -3,7 +3,6 @@ import '../globals.css';
 
 export default function DatosPage() {
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center justify-center p-4">
       <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-4xl">
         <div className="px-4 sm:px-0 mb-6">
           <h3 className="text-2xl font-bold text-gray-800">Nuevo Presupuesto</h3>
@@ -71,6 +70,6 @@ export default function DatosPage() {
           </dl>
         </div>
       </div>
-    </div>
+
   );
 }
