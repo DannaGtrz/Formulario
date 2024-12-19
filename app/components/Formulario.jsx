@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function HtmlFormulario() {
   const [formData, setFormData] = useState({
@@ -11,7 +11,8 @@ export default function HtmlFormulario() {
     tiempoEntrega: "",
     observaciones: "",
   });
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
+ const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,7 +27,9 @@ export default function HtmlFormulario() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-xl text-gray-900">Nuevo presupuesto</h1>
@@ -148,9 +151,9 @@ export default function HtmlFormulario() {
             required
           >
             <option value="">Selecciona el tiempo de entrega</option>
-            <option value="basico">1 Semana</option>
-            <option value="intermedio">2 Semanas</option>
-            <option value="avanzado">1 mes</option>
+            <option value="1 semana">1 Semana</option>
+            <option value="2 semanas">2 Semanas</option>
+            <option value="1 mes">1 mes</option>
           </select>
           <label
             htmlFor="tiempoEntrega"
@@ -186,7 +189,6 @@ export default function HtmlFormulario() {
           Enviar
         </button>
       </form>
-      {/* Modal */}
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
